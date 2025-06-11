@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="id" class="transition-colors duration-500">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Depot BogaSari - Login Admin</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        'primary-green': '#22C55E',
+                        'secondary-red': '#DC2626',
+                        'accent-yellow': '#FBBF24',
+                        'dark-bg-body': '#121212', // Slightly darker than general dark-bg
+                        'dark-bg-card': '#1A202C',
+                        'dark-text': '#E2E8F0',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-gray-100 text-gray-800 transition-colors duration-500 dark:bg-dark-bg-body dark:text-dark-text flex items-center justify-center min-h-screen p-4">
+
+    <div class="bg-white dark:bg-dark-bg-card rounded-lg shadow-xl p-8 w-full max-w-md text-center transition-colors duration-500">
+        <h1 class="text-4xl font-serif font-bold text-primary-green mb-6">BogaSari Admin</h1>
+        <p class="text-gray-600 dark:text-gray-300 mb-8">Masuk ke Panel Admin Anda</p>
+
+        <div class="space-y-6">
+            <div>
+                <label for="email" class="sr-only">Email atau Username</label>
+                <input
+                    type="text"
+                    id="email"
+                    name="email"
+                    placeholder="Email atau Username"
+                    class="w-full p-3 border border-gray-300 rounded-md focus:ring-primary-green focus:border-primary-green dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100 dark:placeholder-gray-400"
+                    required
+                />
+            </div>
+            <div>
+                <label for="password" class="sr-only">Password</label>
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Password"
+                    class="w-full p-3 border border-gray-300 rounded-md focus:ring-primary-green focus:border-primary-green dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100 dark:placeholder-gray-400"
+                    required
+                />
+            </div>
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <input
+                        id="remember_me"
+                        name="remember_me"
+                        type="checkbox"
+                        class="h-4 w-4 text-primary-green border-gray-300 rounded focus:ring-primary-green dark:bg-gray-700 dark:border-gray-600"
+                    />
+                    <label for="remember_me" class="ml-2 block text-sm text-gray-900 dark:text-gray-300">
+                        Ingat Saya
+                    </label>
+                </div>
+                <a href="#" class="text-sm font-medium text-primary-green hover:text-green-700 transition-colors">
+                    Lupa Password?
+                </a>
+            </div>
+            <div>
+                <a
+                    href="panel_admin.html"
+                    class="w-full bg-primary-green text-white p-3 rounded-md font-semibold hover:bg-green-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary-green focus:ring-offset-2 dark:focus:ring-offset-dark-bg-card inline-block"
+                    style="display: flex; justify-content: center; align-items: center;"
+                >
+                    Masuk
+                </a>
+            </div>
+        </div>
+
+        <div class="mt-8 text-sm text-gray-500 dark:text-gray-400">
+            &copy; <span id="currentYear"></span> Depot BogaSari. All rights reserved.
+        </div>
+    </div>
+
+    <button id="darkModeToggle" aria-label="Toggle Dark Mode" class="absolute top-4 right-4 text-accent-yellow focus:outline-none p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+        <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="currentColor" viewBox="0 0 24 24" stroke="none">
+            <path d="M21 12.79A9 9 0 1111.21 3a7 0 009.79 9.79z" />
+        </svg>
+        <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 hidden" fill="currentColor" viewBox="0 0 24 24" stroke="none">
+            <circle cx="12" cy="12" r="5" />
+            <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M17.36 17.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M17.36 6.64l1.42-1.42" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        </svg>
+    </button>
+
+    <script>
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Dark Mode Toggle
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const iconMoon = document.getElementById('icon-moon');
+        const iconSun = document.getElementById('icon-sun');
+        const html = document.documentElement;
+
+        // Check for saved theme preference
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        if (savedTheme === 'dark') {
+            enableDarkMode();
+        } else {
+            enableLightMode();
+        }
+
+        darkModeToggle.addEventListener('click', () => {
+            if (html.classList.contains('dark')) {
+                enableLightMode();
+            } else {
+                enableDarkMode();
+            }
+        });
+
+        function enableDarkMode() {
+            html.classList.add('dark');
+            iconMoon.classList.add('hidden');
+            iconSun.classList.remove('hidden');
+            localStorage.setItem('theme', 'dark');
+        }
+
+        function enableLightMode() {
+            html.classList.remove('dark');
+            iconMoon.classList.remove('hidden');
+            iconSun.classList.add('hidden');
+            localStorage.setItem('theme', 'light');
+        }
+
+        // Removed the form submission JavaScript as it's now a direct link
+    </script>
+</body>
+</html>

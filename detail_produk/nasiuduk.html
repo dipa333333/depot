@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detail Menu - Nasi Ayam Geprek</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class', 
+        }
+    </script>
+    </head>
+<body class="bg-gray-50 text-gray-800 transition-colors duration-500">
+
+    <nav class="bg-white shadow-md sticky top-0 z-10 transition-colors duration-500 dark:bg-gray-800 dark:text-gray-100">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="text-xl font-bold text-green-600 dark:text-red-400 flex items-center gap-2">
+                Depot BogaSari
+                <button id="darkModeToggle" aria-label="Toggle Dark Mode" class="ml-3 text-yellow-500 focus:outline-none">
+                    <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" stroke="none">
+                        <path d="M21 12.79A9 9 0 1111.21 3a7 7 0 009.79 9.79z" />
+                    </svg>
+                    <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden" fill="currentColor" viewBox="0 0 24 24" stroke="none">
+                        <circle cx="12" cy="12" r="5" />
+                        <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M17.36 17.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M17.36 6.64l1.42-1.42" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                </button>
+            </h1>
+            <a href="../index.html" class="text-sm text-gray-600 hover:text-red-600 dark:text-gray-300 dark:hover:text-red-400">&larr; Kembali ke Beranda</a>
+        </div>
+    </nav>
+
+    <section class="py-20 bg-white dark:bg-gray-900 dark:text-gray-100">
+        <div class="max-w-5xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+            <img src="/aset/img/nasiuduk.jpg" alt="Nasi Ayam Geprek" class="rounded shadow">
+            <div>
+                <h2 class="text-3xl font-bold mb-4 dark:text-gray-100">Nasi Uduk</h2>
+                <p class="mb-4 text-gray-700 dark:text-gray-300">Mulai hari atau akhiri santap siang Anda dengan Nasi Uduk Komplit ala Depot BogaSari. Nasi gurih beraroma kelapa, dilengkapi dengan telur balado pedas manis, tempe orek renyah, dan ayam goreng bumbu kuning yang empuk. Sajian lengkap penuh cita rasa!.</p>
+                <p class="text-xl font-semibold text-red-600 mb-6 dark:text-red-400">Rp25.000</p>
+
+                <h3 class="text-xl font-semibold mb-2 dark:text-gray-100">Form Pemesanan</h3>
+                <form class="space-y-4">
+                    <input type="text" placeholder="Nama Lengkap" class="w-full p-3 border rounded dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100" required />
+                    <input type="text" placeholder="Alamat Pengantaran" class="w-full p-3 border rounded dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100" required />
+                    <input type="number" placeholder="Jumlah Pesanan" class="w-full p-3 border rounded dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100" required min="1" />
+                    <button type="submit" class="bg-red-600 text-white px-6 py-3 rounded hover:bg-red-700 dark:hover:bg-red-500">Pesan Sekarang</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white text-center py-6 mt-20 dark:bg-gray-950 dark:text-gray-300">
+        <p>&copy; 2025 Depot BogaSari. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const toggleBtn = document.getElementById('darkModeToggle');
+        const iconMoon = document.getElementById('icon-moon');
+        const iconSun = document.getElementById('icon-sun');
+        const html = document.documentElement;
+
+        // Load saved mode from localStorage or default light
+        const savedMode = localStorage.getItem('mode') || 'light';
+        if (savedMode === 'dark') {
+            enableDarkMode();
+        } else {
+            enableLightMode();
+        }
+
+        // Pastikan tombol toggle ada sebelum menambahkan event listener
+        if (toggleBtn) {
+            toggleBtn.addEventListener('click', () => {
+                if (html.classList.contains('dark')) {
+                    enableLightMode();
+                } else {
+                    enableDarkMode();
+                }
+            });
+        }
+
+
+        function enableDarkMode() {
+            html.classList.add('dark');
+            // Pastikan ikon ada sebelum manipulasi kelas
+            if (iconMoon) iconMoon.classList.add('hidden');
+            if (iconSun) iconSun.classList.remove('hidden');
+            localStorage.setItem('mode', 'dark');
+        }
+
+        function enableLightMode() {
+            html.classList.remove('dark');
+            // Pastikan ikon ada sebelum manipulasi kelas
+            if (iconMoon) iconMoon.classList.remove('hidden');
+            if (iconSun) iconSun.classList.add('hidden');
+            localStorage.setItem('mode', 'light');
+        }
+    </script>
+
+    </body>
+</html>
