@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menus>
+  <menu>
+    <id>2</id>
+    <nama>Es Teh Pahit</nama>
+    <deskripsi>Teh manis dingin segar</deskripsi>
+    <harga>8000</harga>
+    <kategori>minuman</kategori>
+    <status>tersedia</status>
+    <gambar>slide1.jpg</gambar>
+  </menu>
+  <menu>
+    <id>3</id>
+    <nama>Ayam Bakar Madu</nama>
+    <deskripsi>Ayam bakar dengan saus madu spesial</deskripsi>
+    <harga>32000</harga>
+    <kategori>makanan</kategori>
+    <status>tersedia</status>
+    <gambar>menu_684ceaa7efd64.png</gambar>
+  </menu>
+  <menu>
+    <id>4</id>
+    <nama>Nasi Goreng Desa</nama>
+    <deskripsi>mantap</deskripsi>
+    <harga>10000</harga>
+    <kategori>makanan</kategori>
+    <status>tersedia</status>
+    <gambar>menu_684ce39b22e72.jpg</gambar>
+  </menu>
+</menus>

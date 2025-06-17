@@ -67,6 +67,7 @@
 </head>
 <body class="font-sans bg-green-50 text-gray-800 transition-colors duration-500 dark:bg-dark-bg dark:text-dark-text">
 
+    <!-- Navigasi -->
     <nav class="bg-white shadow-md sticky top-0 z-50 transition-colors duration-500 dark:bg-gray-800 dark:shadow-lg">
         <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
             <h1 class="text-2xl font-bold text-primary-green flex items-center gap-3">
@@ -86,8 +87,8 @@
                 <li><a href="#menu" class="nav-link hover:text-secondary-red font-semibold border-b-2 border-transparent hover:border-secondary-red py-2 transition-colors duration-300 dark:text-gray-200 dark:hover:text-secondary-red">Menu</a></li>
                 <li><a href="#tentang" class="nav-link hover:text-secondary-red font-semibold border-b-2 border-transparent hover:border-secondary-red py-2 transition-colors duration-300 dark:text-gray-200 dark:hover:text-secondary-red">Tentang</a></li>
                 <li><a href="#kontak" class="nav-link hover:text-secondary-red font-semibold border-b-2 border-transparent hover:border-secondary-red py-2 transition-colors duration-300 dark:text-gray-200 dark:hover:text-secondary-red">Kontak</a></li>
-                <li><a href="/account/login.html" class="hover:text-secondary-red font-semibold border-b-2 border-transparent hover:border-secondary-red py-2 transition-colors duration-300 dark:text-gray-200 dark:hover:text-secondary-red">Login</a></li>
-                <li><a href="login_admin.html" class="px-3 py-2 rounded-md text-sm font-medium text-white bg-primary-green hover:bg-green-700">Admin</a></li>
+                <li><a href="/depot/account/login.html" class="hover:text-secondary-red font-semibold border-b-2 border-transparent hover:border-secondary-red py-2 transition-colors duration-300 dark:text-gray-200 dark:hover:text-secondary-red">Login</a></li>
+                <li><a href="/depot/login_admin.html" class="px-3 py-2 rounded-md text-sm font-medium text-white bg-primary-green hover:bg-green-700">Admin</a></li>
             </ul>
 
             <button id="hamburgerBtn" class="md:hidden text-gray-800 dark:text-gray-200 focus:outline-none">
@@ -109,17 +110,17 @@
         </div>
     </nav>
 
-
+    <!-- Beranda -->
     <section id="beranda" class="relative">
         <div class="swiper h-[550px] md:h-[600px]"> <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <img src="/aset/caraousel/slide1.jpg" alt="Slide 1: Pilihan hidangan lezat Depot BogaSari" class="w-full h-full object-cover" />
+                    <img src="/depot/aset/caraousel/slide1.jpg" alt="Slide 1: Pilihan hidangan lezat Depot BogaSari" class="w-full h-full object-cover" />
                 </div>
                 <div class="swiper-slide">
-                    <img src="/aset/caraousel/slide2.png" alt="Slide 2: Katering untuk berbagai acara" class="w-full h-full object-cover" />
+                    <img src="/depot/aset/caraousel/slide2.png" alt="Slide 2: Katering untuk berbagai acara" class="w-full h-full object-cover" />
                 </div>
                 <div class="swiper-slide">
-                    <img src="/aset/caraousel/slide3.jpg" alt="Slide 3: Masakan rumahan kualitas terbaik" class="w-full h-full object-cover" />
+                    <img src="/depot/aset/caraousel/slide3.jpg" alt="Slide 3: Masakan rumahan kualitas terbaik" class="w-full h-full object-cover" />
                 </div>
             </div>
         </div>
@@ -136,6 +137,7 @@
         </div>
     </section>
 
+    <!-- Menu Unggulan -->
     <section id="menu" class="py-20 bg-white dark:bg-gray-900 transition-colors duration-500">
         <div class="max-w-6xl mx-auto px-6" data-aos="fade-up">
             <h2 class="text-4xl font-bold text-center mb-12 font-serif dark:text-gray-100">Pilihan Menu Terbaik Kami</h2>
@@ -143,72 +145,72 @@
 
                 <div class="bg-gray-100 p-6 rounded-xl shadow-lg transition-transform transform hover:scale-102 duration-300 dark:bg-gray-800 dark:shadow-md">
                     <div class="mb-4 overflow-hidden rounded-lg">
-                        <img src="/aset/img/ayamgeprekjpg.jpg" alt="Gambar Nasi Ayam Geprek" class="w-full h-48 object-cover rounded-lg transform transition-transform duration-300 hover:scale-110">
+                        <img src="/depot/aset/img/ayamgeprekjpg.jpg" alt="Gambar Nasi Ayam Geprek" class="w-full h-48 object-cover rounded-lg transform transition-transform duration-300 hover:scale-110">
                     </div>
                     <h3 class="text-xl font-bold mb-2 dark:text-gray-100">Nasi Ayam Geprek</h3>
                     <p class="mb-3 text-gray-700 text-sm dark:text-gray-300">Ayam crispy dengan sambal bawang pedas khas, disajikan dengan nasi hangat dan lalapan segar. Pedasnya nampol!</p>
                     <span class="font-bold text-secondary-red text-lg dark:text-red-400">Rp25.000</span>
-                    <a href="/detail_produk/ayamgeprek.html" class="mt-4 bg-secondary-red text-white px-5 py-2.5 rounded-lg hover:bg-red-700 active:bg-red-800 block text-center font-semibold transition-colors duration-300">
+                    <a href="/depot/detail_produk/ayamgeprek.html" class="mt-4 bg-secondary-red text-white px-5 py-2.5 rounded-lg hover:bg-red-700 active:bg-red-800 block text-center font-semibold transition-colors duration-300">
                         Lihat Detail & Pesan
                     </a>
                 </div>
 
                 <div class="bg-gray-100 p-6 rounded-xl shadow-lg transition-transform transform hover:scale-102 duration-300 dark:bg-gray-800 dark:shadow-md">
                     <div class="mb-4 overflow-hidden rounded-lg">
-                        <img src="/aset/img/nasirendang.jpg" alt="Gambar Nasi Rendang" class="w-full h-48 object-cover rounded-lg transform transition-transform duration-300 hover:scale-110">
+                        <img src="/depot/aset/img/nasirendang.jpg" alt="Gambar Nasi Rendang" class="w-full h-48 object-cover rounded-lg transform transition-transform duration-300 hover:scale-110">
                     </div>
                     <h3 class="text-xl font-bold mb-2 dark:text-gray-100">Nasi Rendang</h3>
                     <p class="mb-3 text-gray-700 text-sm dark:text-gray-300">Daging sapi pilihan dimasak perlahan dalam santan kental dan rempah pilihan hingga empuk dan bumbunya meresap sempurna.</p>
                     <span class="font-bold text-secondary-red text-lg dark:text-red-400">Rp30.000</span>
-                    <a href="/detail_produk/nasirendang.html" class="mt-4 bg-secondary-red text-white px-5 py-2.5 rounded-lg hover:bg-red-700 active:bg-red-800 block text-center font-semibold transition-colors duration-300">
+                    <a href="/depot/detail_produk/nasirendang.html" class="mt-4 bg-secondary-red text-white px-5 py-2.5 rounded-lg hover:bg-red-700 active:bg-red-800 block text-center font-semibold transition-colors duration-300">
                         Lihat Detail & Pesan
                     </a>
                 </div>
 
                 <div class="bg-gray-100 p-6 rounded-xl shadow-lg transition-transform transform hover:scale-102 duration-300 dark:bg-gray-800 dark:shadow-md">
                     <div class="mb-4 overflow-hidden rounded-lg">
-                        <img src="/aset/img/sayurlodeh.jpg" alt="Gambar Nasi Sayur Lodeh" class="w-full h-48 object-cover rounded-lg transform transition-transform duration-300 hover:scale-110">
+                        <img src="/depot/aset/img/sayurlodeh.jpg" alt="Gambar Nasi Sayur Lodeh" class="w-full h-48 object-cover rounded-lg transform transition-transform duration-300 hover:scale-110">
                     </div>
                     <h3 class="text-xl font-bold mb-2 dark:text-gray-100">Nasi Sayur Lodeh</h3>
                     <p class="mb-3 text-gray-700 text-sm dark:text-gray-300">Perpaduan sayuran segar dalam kuah santan gurih yang kaya rempah, hidangan rumahan menyehatkan dan penuh rasa.</p>
                     <span class="font-bold text-secondary-red text-lg dark:text-red-400">Rp20.000</span>
-                    <a href="/detail_produk/sayurlodeh.html" class="mt-4 bg-secondary-red text-white px-5 py-2.5 rounded-lg hover:bg-red-700 active:bg-red-800 block text-center font-semibold transition-colors duration-300">
+                    <a href="/depot/detail_produk/sayurlodeh.html" class="mt-4 bg-secondary-red text-white px-5 py-2.5 rounded-lg hover:bg-red-700 active:bg-red-800 block text-center font-semibold transition-colors duration-300">
                         Lihat Detail & Pesan
                     </a>
                 </div>
 
                 <div class="bg-gray-100 p-6 rounded-xl shadow-lg transition-transform transform hover:scale-102 duration-300 dark:bg-gray-800 dark:shadow-md">
                     <div class="mb-4 overflow-hidden rounded-lg">
-                        <img src="/aset/img/sateayam.webp" alt="Gambar Nasi Sate Ayam" class="w-full h-48 object-cover rounded-lg transform transition-transform duration-300 hover:scale-110">
+                        <img src="/depot/aset/img/sateayam.webp" alt="Gambar Nasi Sate Ayam" class="w-full h-48 object-cover rounded-lg transform transition-transform duration-300 hover:scale-110">
                     </div>
                     <h3 class="text-xl font-bold mb-2 dark:text-gray-100">Nasi Sate Ayam</h3>
                     <p class="mb-3 text-gray-700 text-sm dark:text-gray-300">Sate ayam lembut dibakar sempurna dengan bumbu kacang medok khas, disajikan bersama lontong dan bawang goreng.</p>
                     <span class="font-bold text-secondary-red text-lg dark:text-red-400">Rp28.000</span>
-                    <a href="/detail_produk/sateayam.html" class="mt-4 bg-secondary-red text-white px-5 py-2.5 rounded-lg hover:bg-red-700 active:bg-red-800 block text-center font-semibold transition-colors duration-300">
+                    <a href="/depot/detail_produk/sateayam.html" class="mt-4 bg-secondary-red text-white px-5 py-2.5 rounded-lg hover:bg-red-700 active:bg-red-800 block text-center font-semibold transition-colors duration-300">
                         Lihat Detail & Pesan
                     </a>
                 </div>
 
                 <div class="bg-gray-100 p-6 rounded-xl shadow-lg transition-transform transform hover:scale-102 duration-300 dark:bg-gray-800 dark:shadow-md">
                     <div class="mb-4 overflow-hidden rounded-lg">
-                        <img src="/aset/img/nasiuduk.jpg" alt="Gambar Nasi Uduk Komplit" class="w-full h-48 object-cover rounded-lg transform transition-transform duration-300 hover:scale-110">
+                        <img src="/depot/aset/img/nasiuduk.jpg" alt="Gambar Nasi Uduk Komplit" class="w-full h-48 object-cover rounded-lg transform transition-transform duration-300 hover:scale-110">
                     </div>
                     <h3 class="text-xl font-bold mb-2 dark:text-gray-100">Nasi Uduk Komplit</h3>
                     <p class="mb-3 text-gray-700 text-sm dark:text-gray-300">Nasi gurih beraroma kelapa dengan telur balado, tempe orek renyah, dan ayam goreng bumbu kuning yang empuk. Sajian lengkap!</p>
                     <span class="font-bold text-secondary-red text-lg dark:text-red-400">Rp27.000</span>
-                    <a href="/detail_produk/nasiuduk.html" class="mt-4 bg-secondary-red text-white px-5 py-2.5 rounded-lg hover:bg-red-700 active:bg-red-800 block text-center font-semibold transition-colors duration-300">
+                    <a href="/depot/detail_produk/nasiuduk.html" class="mt-4 bg-secondary-red text-white px-5 py-2.5 rounded-lg hover:bg-red-700 active:bg-red-800 block text-center font-semibold transition-colors duration-300">
                         Lihat Detail & Pesan
                     </a>
                 </div>
 
                 <div class="bg-gray-100 p-6 rounded-xl shadow-lg transition-transform transform hover:scale-102 duration-300 dark:bg-gray-800 dark:shadow-md">
                     <div class="mb-4 overflow-hidden rounded-lg">
-                        <img src="/aset/img/nasipecel.jpeg" alt="Gambar Nasi Pecel" class="w-full h-48 object-cover rounded-lg transform transition-transform duration-300 hover:scale-110">
+                        <img src="/depot/aset/img/nasipecel.jpeg" alt="Gambar Nasi Pecel" class="w-full h-48 object-cover rounded-lg transform transition-transform duration-300 hover:scale-110">
                     </div>
                     <h3 class="text-xl font-bold mb-2 dark:text-gray-100">Nasi Pecel</h3>
                     <p class="mb-3 text-gray-700 text-sm dark:text-gray-300">Aneka sayuran rebus segar disiram bumbu kacang kencur khas Madiun yang legit, pedas, dan sedikit manis. Pilihan sehat kaya rasa!</p>
                     <span class="font-bold text-secondary-red text-lg dark:text-red-400">Rp22.000</span>
-                    <a href="/detail_produk/nasipecel.html" class="mt-4 bg-secondary-red text-white px-5 py-2.5 rounded-lg hover:bg-red-700 active:bg-red-800 block text-center font-semibold transition-colors duration-300">
+                    <a href="/depot/detail_produk/nasipecel.html" class="mt-4 bg-secondary-red text-white px-5 py-2.5 rounded-lg hover:bg-red-700 active:bg-red-800 block text-center font-semibold transition-colors duration-300">
                         Lihat Detail & Pesan
                     </a>
                 </div>
@@ -216,29 +218,30 @@
         </div>
     </section>
 
+    <!-- Paket Katering -->
     <section class="paket-catering py-20 bg-green-100 dark:bg-gray-900 transition-colors duration-500">
         <h2 class="text-4xl font-bold text-center mb-12 text-green-800 font-serif dark:text-primary-green" data-aos="fade-up">Pilihan Paket Katering Unggulan</h2>
         <div class="container mx-auto grid md:grid-cols-4 gap-8 px-6" data-aos="fade-up">
             <div class="card text-center bg-white p-6 rounded-xl shadow-lg transition-transform transform hover:scale-102 duration-300 dark:bg-gray-800 dark:shadow-md">
-                <img src="/aset/katering menu/nasibox.jpg" alt="Gambar Paket Nasi Box" class="mx-auto mb-5 rounded-lg w-full h-40 object-cover transform transition-transform duration-300 hover:scale-110">
+                <img src="/depot/aset/katering menu/nasibox.jpg" alt="Gambar Paket Nasi Box" class="mx-auto mb-5 rounded-lg w-full h-40 object-cover transform transition-transform duration-300 hover:scale-110">
                 <h3 class="font-bold mb-3 text-xl dark:text-gray-100">Paket Nasi Box</h3>
                 <p class="text-gray-700 text-sm mb-4 dark:text-gray-300">Pilihan praktis dan lezat untuk berbagai acara, dengan menu bervariasi.</p>
                 <button class="btn bg-secondary-red text-white px-6 py-2.5 rounded-lg hover:bg-red-700 active:bg-red-800 font-semibold transition-colors duration-300">Pesan Sekarang</button>
             </div>
             <div class="card text-center bg-white p-6 rounded-xl shadow-lg transition-transform transform hover:scale-102 duration-300 dark:bg-gray-800 dark:shadow-md">
-                <img src="/aset/katering menu/prasmanan.webp" alt="Gambar Prasmanan" class="mx-auto mb-5 rounded-lg w-full h-40 object-cover transform transition-transform duration-300 hover:scale-110">
+                <img src="/depot/aset/katering menu/prasmanan.webp" alt="Gambar Prasmanan" class="mx-auto mb-5 rounded-lg w-full h-40 object-cover transform transition-transform duration-300 hover:scale-110">
                 <h3 class="font-bold mb-3 text-xl dark:text-gray-100">Prasmanan Spesial</h3>
                 <p class="text-gray-700 text-sm mb-4 dark:text-gray-300">Tampilan hidangan elegan untuk acara formal maupun informal, porsi besar.</p>
                 <button class="btn bg-secondary-red text-white px-6 py-2.5 rounded-lg hover:bg-red-700 active:bg-red-800 font-semibold transition-colors duration-300">Pesan Sekarang</button>
             </div>
             <div class="card text-center bg-white p-6 rounded-xl shadow-lg transition-transform transform hover:scale-102 duration-300 dark:bg-gray-800 dark:shadow-md">
-                <img src="/aset/katering menu/katkaryawan.jpg" alt="Gambar Catering Karyawan" class="mx-auto mb-5 rounded-lg w-full h-40 object-cover transform transition-transform duration-300 hover:scale-110">
+                <img src="/depot/aset/katering menu/katkaryawan.jpg" alt="Gambar Catering Karyawan" class="mx-auto mb-5 rounded-lg w-full h-40 object-cover transform transition-transform duration-300 hover:scale-110">
                 <h3 class="font-bold mb-3 text-xl dark:text-gray-100">Katering Karyawan</h3>
                 <p class="text-gray-700 text-sm mb-4 dark:text-gray-300">Solusi makan siang bergizi untuk perusahaan, disesuaikan dengan kebutuhan Anda.</p>
                 <button class="btn bg-secondary-red text-white px-6 py-2.5 rounded-lg hover:bg-red-700 active:bg-red-800 font-semibold transition-colors duration-300">Pesan Sekarang</button>
             </div>
             <div class="card text-center bg-white p-6 rounded-xl shadow-lg transition-transform transform hover:scale-102 duration-300 dark:bg-gray-800 dark:shadow-md">
-                <img src="/aset/katering menu/snackbox.jpg" alt="Gambar Snack Box" class="mx-auto mb-5 rounded-lg w-full h-40 object-cover transform transition-transform duration-300 hover:scale-110">
+                <img src="/depot/aset/katering menu/snackbox.jpg" alt="Gambar Snack Box" class="mx-auto mb-5 rounded-lg w-full h-40 object-cover transform transition-transform duration-300 hover:scale-110">
                 <h3 class="font-bold mb-3 text-xl dark:text-gray-100">Snack Box Premium</h3>
                 <p class="text-gray-700 text-sm mb-4 dark:text-gray-300">Aneka kue dan jajanan tradisional/modern untuk pelengkap acara Anda.</p>
                 <button class="btn bg-secondary-red text-white px-6 py-2.5 rounded-lg hover:bg-red-700 active:bg-red-800 font-semibold transition-colors duration-300">Pesan Sekarang</button>
@@ -248,10 +251,11 @@
 
     <div class="h-20 bg-gradient-to-b from-green-100 to-green-400 dark:from-gray-900 dark:to-green-400 transition-all duration-500"></div>
 
+     <!-- Tentang -->
     <section id="tentang" class="about-us py-20 bg-white dark:bg-dark-bg transition-colors duration-500">
         <h2 class="text-4xl font-bold text-center mb-12 text-green-800 font-serif dark:text-primary-green">Mengenal Depot BogaSari</h2>
         <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12 px-6" data-aos="fade-up">
-            <img src="/aset/img/jurusan-tata-boga.jpg" alt="Tim Depot BogaSari sedang memasak" class="w-full md:w-1/2 rounded-xl shadow-lg" />
+            <img src="/depot/aset/img/jurusan-tata-boga.jpg" alt="Tim Depot BogaSari sedang memasak" class="w-full md:w-1/2 rounded-xl shadow-lg" />
             <div class="md:w-1/2 text-gray-100 dark:text-gray-200">
                 <p class="mb-6 text-lg text-black dark:text-white">
                     **Depot BogaSari** adalah penyedia layanan katering terpercaya yang telah berpengalaman sejak tahun 2012. Berawal dari semangat menghadirkan masakan rumahan autentik dengan cita rasa tak terlupakan, kami terus berkomitmen mengutamakan **kualitas bahan, kebersihan, dan pelayanan terbaik** untuk setiap hidangan yang kami sajikan.
@@ -266,8 +270,9 @@
 
     <div class="h-20 bg-gradient-to-b from-green-400 to-white dark:from-green-400 dark:to-gray-900 transition-all duration-500"></div>
 
+     <!--Kontak  -->
     <section id="kontak" class="py-20 bg-white dark:bg-gray-900 transition-colors duration-500">
-        <div class="max-w-xl mx-auto px-6">
+        <div class="max-w-xl mx-auto px-6" data-aos="fade-up">
             <h2 class="text-4xl font-bold text-center mb-10 font-serif dark:text-gray-100">Hubungi Kami</h2>
             <p class="text-center text-lg mb-8 text-gray-700 dark:text-gray-300">Kami siap melayani kebutuhan katering Anda. Silakan isi formulir di bawah ini atau hubungi kami langsung.</p>
             <form id="contactForm" class="space-y-6">
@@ -389,7 +394,7 @@
         document.addEventListener('DOMContentLoaded', () => {
             const typingElement = document.getElementById('typingText');
             // Menambahkan kata lain di sini jika ingin berputar
-            const words = ["Depot BogaSari", "Masakan Rumahan", "Katering Lezat"]; 
+            const words = ["Depot BogaSari", "Masakan Rumahan", "Terbaik"]; 
             let wordIndex = 0;
             let charIndex = 0;
             let isDeleting = false;
